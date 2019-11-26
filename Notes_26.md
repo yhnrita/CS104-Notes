@@ -124,4 +124,11 @@
 - False Negative
 	- we say "no" but answer is "yes"
 	- bloom filter will _neve_ return a false negative as long as **no removal**
-	
+- Do _NOT_ use bloom filters if ever worried about removing something
+- Reduce collision
+	- use multiple hash functions
+	- `h1(k) = (7x + 4) % 10`
+	- `h2(k) = (2x + 1) % 10`
+	- `h3(k) = (5x + 3) % 10`
+	- only if all three of them are 1 then saying yes it is there
+	- choose hash table size 
